@@ -1,0 +1,31 @@
+<div class="container-fluid" style="height : 100vh; background: hsl(230, 17%, 14%)">
+    <div class="container">
+        <table class="table text-white"; style= "font-family: 'Inter', sans-serif" >
+            <tr>
+                <th>#</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Telefono</th>
+                <th>Direccion</th>
+                <th>Imagen</th>
+                <th>-</th>
+                <th>-</th>
+            </tr>
+            {{#each empleados}}
+            <tr>
+                <td>{{id}}</td>
+                <td>{{nombre}}</td>
+                <td>{{apellido}}</td>
+                <td>{{telefono}}</td>
+                <td>{{direccion}}</td>
+                <td><img src="/images/{{uuid}}" alt="no hay imagen" style="height : 50px; border-radius: 50%"></td>
+                <td><a href="/admin/empleados/update/{{id}}" class="btn text-primary"><i class="fas fa-edit"></i>
+                        Editar</a></td>
+                <td><a href="/admin/empleados/delete/{{id}}" class="btn text-danger"><i class="fas fa-trash-alt"></i>
+                        Eliminar</a></td>
+            </tr>
+            {{/each}}
+        </table>
+         <a href="/admin/empleados/create" class="btn mt-4 text-light"; style="background:hsl(228, 28%, 20%)">Agregar empleados</a>
+    </div>
+</div>

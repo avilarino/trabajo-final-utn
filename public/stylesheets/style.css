@@ -1,0 +1,96 @@
+@font-face {
+  font-family: 'Inter', sans-serif;
+  src: url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+  font-weight: 400;
+}
+
+
+
+a {
+  color: #00B7FF;
+}
+
+.box:hover {
+  opacity: 70%
+}
+
+.box-fb {
+  height: 180px;
+  width: 260px;
+  border-top: 5px solid hsl(208, 92%, 53%);
+  border-radius: 5px;
+  margin-bottom: 20px;
+  font-family: 'Inter', sans-serif; 
+}
+
+.box-ig {
+  height: 180px;
+  width: 260px;
+  border-top:5px solid orange;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  font-family: 'Inter', sans-serif; 
+}
+
+.box-yt {
+  height: 180px;
+  width: 260px;
+  border-top: 5px solid hsl(348, 97%, 39%);
+  border-radius: 5px;
+  margin-bottom: 20px;
+  font-family: 'Inter', sans-serif; 
+}
+
+.title-box {
+  width: 260px;
+  font-family: 'Inter', sans-serif; 
+}
+
+.box-comments {
+  width: 260px;
+  height: 110px;
+  border-radius: 5px;
+  font-family: 'Inter', sans-serif; 
+}
+
+
+
+@media only screen and (min-width: 700px) {
+  
+  .big-boxes {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: space-between
+  }
+
+  .box {
+    margin-right: 30px;
+    margin-bottom: 0px
+  }
+
+  .comments-one {
+    display: flex;
+    justify-content: center
+  }
+
+  .comments-two {
+    display: flex;
+    justify-content: center
+  }
+
+  .box-comments {
+    margin-right: 30px
+  }
+
+  .title-box {
+    margin-left: 85px
+  }
+
+  .lite {
+    margin-left: 90px;
+    margin-right: 120px
+  }
+
+
+}

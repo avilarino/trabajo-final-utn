@@ -1,0 +1,43 @@
+<body style=" background: hsl(230, 17%, 14%)">
+
+    <div class="container-fluid" style="height : 100vh">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h4 class="text-light mt-4">Productos</h4>
+                    <form action="/productos" method="post">
+                        <div class="form-group mt-3">
+                            <input type="text" name="aBuscar" placeholder="Ingrese un producto a buscar"
+                                class="form-control">
+                        </div>
+                        <div class="d-grid gap-2">
+                            <button class="btn mt-3 text-light" style="background:hsl(228, 28%, 20%)">Buscar 🔎</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    <div class="container-fluid " style="height : 100vh; padding:100px">
+        <table class="table text-white" style="font-family: 'Inter', sans-serif">
+            <tr>
+                <th>Nombre</th>
+                <th>Descripcion</th>
+                <th>Precio</th>
+                <th>Categoria</th>
+                <th>Sobre los Vinos</th>
+                <th>Contenido</th>
+            </tr>
+            {{#each productos}}
+            <tr>
+                <td>{{id}}</td>
+                <td>{{nombre}}</td>
+                <td>{{descripcion}}</td>
+                <td>$ {{precio}}</td>
+                <td>{{nombreCategoria}}</td>
+                <td><a style="color:hsl(163, 72%, 41%); text-decoration:none "href="/productos/single/{{id}}"><i class="fas fa-caret-up" ></i> Ver mas</a></td>
+            </tr>
+            {{/each}}
+        </table>
+
+    </div>
+</body>

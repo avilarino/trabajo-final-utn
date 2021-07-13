@@ -1,0 +1,25 @@
+<body>
+    <div class="container-fluid" style="height: 100vh; background: hsl(230, 17%, 14%)">
+        <div class="container">
+            <table class="table text-white">
+                <tr>
+                    <th>#</th>
+                    <th>Tipo de Uva</th>
+                    <th>Nombre</th>
+                    <th>Editar</th>
+                    <th>Eliminar</th>
+                </tr>
+                {{#each categorias}}
+                <tr>
+                    <td>{{id}}</td>
+                    <td>{{descripcion}}</td>
+                    <td>{{nombre}}</td>
+                    <td><a href="/admin/categorias/update/{{id}}" style="text-decoration:none"> Editar <i class="fas fa-edit text-primary"></i></a></td>
+                    <td><a class="text-danger" style="text-decoration:none" href="/admin/categorias/delete/{{id}}"> Eliminar<i class="fas fa-trash-alt text-danger" style="margin-left:5px"></i></a></td>
+                </tr>
+                {{/each}}
+            </table>
+            <a href="/admin/categorias/create" class="btn mt-4 mb-4 text-light" style="background:hsl(228, 28%, 20%)">Agregar Categoria</a>
+        </div>
+    </div>
+</body>

@@ -1,0 +1,21 @@
+<div class="container-fluid bg-dark m-0" style="height : 100vh">
+    <div class="row justify-content-center align-items-center" style="height : 100vh">
+        <div class="col-7 text-light">
+            <form method="post" action="/admin/categorias/create">
+                <h3 style="border-bottom: 1px solid grey">Crear Categoria</h3>
+                <div class="form-group">
+                    <label for="nombre">Nombre del producto<span class="text-danger"></span></label>
+                    <input type="text" class="form-control" name="nombre" id="nombre">
+                </div>
+                <div class="form-group">
+                    <label for="descripcion">Descripcion<span class="text-danger"></span></label>
+                    <input type="text" class="form-control" name="descripcion" id="descripcion">
+                </div>
+                <div class="d-grid gap-2">
+                    <button type="submit" class="btn mt-3 text-light" style="background:hsl(228, 28%, 20%)">Agregar categoria</button>
+                </div>
+            </form>
+        </div>
+
+    </div>
+</div>

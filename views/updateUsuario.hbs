@@ -1,0 +1,26 @@
+<body style="background: hsl(230, 17%, 14%)">
+<div class="container-fluid bg-dark m-0" style="height : 100vh">
+    <div class="row justify-content-center align-items-center" style="height : 100vh">
+        <div class="col-7 text-light">
+            <form method="post" action="/admin/usuarios/update/{{usuario.id}}">
+                <div class="form-group">
+                    <label for="username">Nombre del producto</label>
+                    <input type="text" class="form-control" name="username" id="username" value="{{usuario.username}}">
+                </div>
+                <div class="form-group">
+                    <label for="mail">Descripcion</label>
+                    <input type="text" class="form-control" name="mail" id="mail"
+                        value="{{usuario.mail}}">
+                </div>
+                <div class="form-group">
+                    <label for="telefono">Precio</label>
+                    <input type="number" class="form-control" name="telefono" id="telefono" value="{{usuario.telefono}}">
+                </div>
+                <div class="d-grid gap-2">
+                    <button type="submit" class="btn mt-3 text-light" style="background:hsl(228, 28%, 20%)">Modificar producto</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</body>

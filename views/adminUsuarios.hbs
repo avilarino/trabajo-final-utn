@@ -1,0 +1,30 @@
+
+<body>
+    <div class="container-fluid" style="height: 100vh; background: hsl(230, 17%, 14%)">
+        <div class="container">
+            <table class="table text-white">
+                <tr>
+                    <th>#</th>
+                    <th>Nombre</th>
+                    <th>Mail</th>
+                    <th>Telefono</th>
+                    <th>Editar</th>
+                    <th>Eliminar</th>
+                </tr>
+               
+                {{#each usuarios}}
+                <tr>
+                    <td>{{id}}</td>
+                    <td>{{username}}</td>
+                    <td>{{mail}}</td>
+                    <td>{{telefono}}</td>
+                    <td><a href="/admin/usuarios/update/{{id}}" style="text-decoration:none"> Editar <i class="fas fa-edit text-primary"></i></a></td>
+                    <td><a class="text-danger" style="text-decoration:none" href="/admin/usuarios/delete/{{id}}"> Eliminar<i class="fas fa-trash-alt text-danger" style="margin-left:5px"></i></a></td>
+                </tr>
+                {{/each}}
+            </table>
+            <a href="/admin/usuarios/create" class="btn mt-4 mb-4 text-light" style="background:hsl(228, 28%, 20%)">Agregar Usuario</a>
+
+        </div>
+    </div>
+</body>
