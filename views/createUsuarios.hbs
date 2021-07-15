@@ -2,7 +2,7 @@
     <div class="row justify-content-center align-items-center" style="height : 100vh">
         <div class="col-7 text-light">
             <form method="post" action="/admin/usuarios/create">
-                <h3 style="border-bottom: 1px solid grey">Crear Usuarios</h3>
+                <h3 style="border-bottom: 1px solid grey">Crear Usuarios </h3>
                 <div class="form-group">
                     <label for="username">Nombre<span class="text-danger"></span></label>
                     <input type="username" class="form-control" name="username" id="username">
@@ -15,7 +15,15 @@
                     <label for="telefono">Telefono<span class="text-danger"></span></label>
                     <input type="number" class="form-control" name="telefono" id="telefono">
                 </div>
-                
+               <label for="admin">Usuario Administrador<span class="text-danger"></span></label>
+                <select name="admin" id="admin" class="form-select">
+            
+                    <option value="1">administrador</option>
+                    <option value="0">No es mas administrador</option>
+
+                </select>
+                <div class="d-grid gap-2">
+             
                 <div class="d-grid gap-2">
                     <button type="submit" class="btn mt-3 text-light" style="background:hsl(228, 28%, 20%)">Agregar Usuario</button>
                 </div>

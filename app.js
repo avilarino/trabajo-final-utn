@@ -15,6 +15,7 @@ const registroRouter = require('./routes/registro');
 const productosRouter = require('./routes/productos');
 const blogRouter = require('./routes/blog');
 const redesRouter = require('./routes/redes');
+const SociosRouter = require('./routes/socios');
 const loginRouter = require('./routes/login');
 const usuarios = require('./routes/usuarios');
 
@@ -55,6 +56,7 @@ app.use('/users', usersRouter);
 app.use('/registro', registroRouter);
 app.use('/productos', productosRouter);
 app.use('/blog', blogRouter);
+app.use('/socios', SociosRouter);
 app.use('/redes', redesRouter);
 app.use('/login', loginRouter);
 
@@ -62,11 +64,11 @@ app.use('/login', loginRouter);
 app.use('/usuarios', verifyUser, usuarios);
 
 /* admin */
-app.use('/admin', verifyUser, adminindex);
-app.use('/admin/productos', verifyUser,  adminproductos,);
-app.use('/admin/usuarios', verifyUser,  adminusuarios);
-app.use('/admin/categorias', verifyUser,  admincategorias);
-app.use('/admin/empleados', verifyUser,  adminEmpleados);
+app.use('/admin', adminindex);
+app.use('/admin/productos',  adminproductos,);
+app.use('/admin/usuarios',  adminusuarios);
+app.use('/admin/categorias',  admincategorias);
+app.use('/admin/empleados',   adminEmpleados);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

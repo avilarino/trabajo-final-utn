@@ -45,7 +45,8 @@ const showUpdateUsu = async (req, res) => {
 const delusuario = async (req, res) => {
   const {id} = req.params;
   const {insertId} = await model.delusuario(id);
-  console.log(insertId);
+  console.log(req.params);
+  console.log(insertId)
   res.redirect('/admin/usuarios');
 }
 

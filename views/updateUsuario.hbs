@@ -16,9 +16,18 @@
                     <label for="telefono">Precio</label>
                     <input type="number" class="form-control" name="telefono" id="telefono" value="{{usuario.telefono}}">
                 </div>
+                 <div>
+                      <label for="telefono">Administración</label>
+                    <select name="admin" id="admin" class="form-select">
+                        <option value="1">administrador</option>
+                        <option value="0">No es mas administrador</option>
+                    </select>
+                </div>
                 <div class="d-grid gap-2">
                     <button type="submit" class="btn mt-3 text-light" style="background:hsl(228, 28%, 20%)">Modificar producto</button>
                 </div>
+               
+               
             </form>
         </div>
     </div>
