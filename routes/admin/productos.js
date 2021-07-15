@@ -27,6 +27,7 @@ const update = async (req, res) => {
     console.log(insertId);
     res.redirect('/admin/productos');
 }
+
 const showUpdate = async (req, res) => {
     const {id} = req.params;
     const [producto] = await model.getSingle(id);

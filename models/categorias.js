@@ -24,11 +24,11 @@ const updatecate = async(id, obj) => {
   return await pool.query(query, params);
 }
 
-const delcat = async(id) => {
+const delcategoria = async(id) => {
   const query = "UPDATE ?? SET eliminado = 1 WHERE id = ?";
   const params = [T_CATEGORIAS, id];
   return await pool.query(query, params);
 }
 
 
-module.exports= {get, getsinglecat, crearcat, updatecate, delcat}
+module.exports= {get, getsinglecat, crearcat, updatecate, delcategoria}

@@ -36,7 +36,7 @@ const all = async() => {
     return await pool.query(query, params);
 }
 
-const delusu = async(id) => {
+const delusuario = async(id) => {
     const query = "UPDATE ?? SET eliminado = 1 WHERE id = ?";
     const params = [T_USUARIOS, id];
     return await pool.query(query, params);
@@ -45,5 +45,4 @@ const delusu = async(id) => {
 
 
 
-
-module.exports = {create, verify, auth, single, update, all, delusu}
+module.exports = {create, verify, auth, single, update, all, delusuario}

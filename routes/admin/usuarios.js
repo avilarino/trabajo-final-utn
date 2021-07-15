@@ -1,6 +1,8 @@
 const express = require('express');
 const router = express.Router();
-const {all, single, create, update, delusu} = require ('./../../models/usuarios')
+const {all, single, create, update} = require ('./../../models/usuarios')
+const model = require('./../../models/usuarios');
+
 
 
 const allusu =  async (req, res) => {
@@ -26,9 +28,6 @@ const getcreateusu = async (req, res) => {
   res.render("createUsuarios")
 }
 
-
-
-
 const updateusu = async (req, res) => {
   const {id} = req.params;
   const usuario = req.body;
@@ -43,9 +42,9 @@ const showUpdateUsu = async (req, res) => {
   res.render('updateUsuario', {usuario});
 }
 
-const del = async (req, res) => {
+const delusuario = async (req, res) => {
   const {id} = req.params;
-  const {insertId} = await delusu(id);
+  const {insertId} = await model.delusuario(id);
   console.log(insertId);
   res.redirect('/admin/usuarios');
 }
@@ -53,7 +52,7 @@ const del = async (req, res) => {
 
 
 
-router.get('/delete/:id', del);
+router.get('/delete/:id', delusuario);
 
 router.get('/update/:id', showUpdateUsu);
 router.post('/update/:id', updateusu);

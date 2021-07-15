@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const {get, getsinglecat, crearcat, updatecate, delcat} = require ('./../../models/categorias')
+const {get, getsinglecat, crearcat, updatecate, delcategoria} = require ('./../../models/categorias')
 
 const allcat =  async (req, res) => {
   const categorias = await get();
@@ -43,7 +43,7 @@ const showUpdatecat = async (req, res) => {
 
 const del = async (req, res) => {
   const {id} = req.params;
-  const {insertId} = await delcat(id);
+  const {insertId} = await delcategoria(id);
   console.log(insertId);
   res.redirect('/admin/categorias');
 }
