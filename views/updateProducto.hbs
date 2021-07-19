@@ -8,19 +8,19 @@
                     <input type="text" class="form-control" name="nombre" id="nombre" value="{{producto.nombre}}">
                 </div>
                 <div class="form-group">
-                    <label for="descripcion">Descripcion<span class="text-danger">*</span></label>
+                    <label for="descripcion">Descripcion</label>
                     <input type="text" class="form-control" name="descripcion" id="descripcion"
                         value="{{producto.descripcion}}">
                 </div>
                 <div class="form-group">
-                    <label for="precio">Precio<span class="text-danger">*</span></label>
+                    <label for="precio">Precio</label>
                     <input type="number" class="form-control" name="precio" id="precio" value="{{producto.precio}}">
                 </div>
                 <div class="form-group">
-                    <label for="stock">Stock<span class="text-danger">*</span></label>
+                    <label for="stock">Stock</label>
                     <input type="number" class="form-control" name="stock" id="stock" value="{{producto.stock}}">
                 </div>
-                <label for="id_categoria">Categoria<span class="text-danger">*</span></label>
+                <label for="id_categoria">Categoria</label>
                 <select name="id_categoria" id="id_categoria" class="form-select">
                     <option value="{{producto.id_categoria}}">{{producto.nombreCategoria}}</option>
                     {{#each categorias}}

@@ -31,7 +31,7 @@ const update = async(id, obj) => {
     return await pool.query(query, params);
 }
 const all = async() => {
-    const query = "SELECT * FROM ??";
+    const query = "SELECT * FROM ?? WHERE eliminado = 0";
     const params = [T_USUARIOS];
     return await pool.query(query, params);
 }

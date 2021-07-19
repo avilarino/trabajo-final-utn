@@ -2,7 +2,7 @@ const pool = require('./../utils/bd');
 const T_CATEGORIAS = "categorias"
 
 const get = async () => {
-  const query = "SELECT * FROM categorias ";
+  const query = "SELECT * FROM categorias WHERE eliminado = 0 ";
   return await pool.query (query);
 }
 

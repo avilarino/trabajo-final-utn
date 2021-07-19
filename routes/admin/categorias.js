@@ -18,7 +18,7 @@ const createcat = async (req, res) => {
   const {body: categoria} = req;
   const messageIdcat = await crearcat(categoria);
   console.log(messageIdcat);
-  res.redirect("admin");
+  res.redirect("/admin/categorias");
 }
 
 const getcreatecat = async (req, res) => {
@@ -32,7 +32,7 @@ const updatecat = async (req, res) => {
   console.log(categoria);
   const {insertId} = await updatecate(id, categoria);
   console.log(insertId);
-  res.redirect('/admin/categorias');
+  res.redirect('/');
 }
 
 const showUpdatecat = async (req, res) => {
@@ -43,8 +43,8 @@ const showUpdatecat = async (req, res) => {
 
 const del = async (req, res) => {
   const {id} = req.params;
-  const {insertId} = await delcategoria(id);
-  console.log(insertId);
+  const {messageId} = await delcategoria(id);
+  console.log(messageId);
   res.redirect('/admin/categorias');
 }
 
