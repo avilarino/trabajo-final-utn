@@ -6,7 +6,7 @@ const logger = require('morgan');
 const dotenv = require('dotenv')
 /* sessions */
 const session = require('express-session')
-const {verifyUser} = require('./middlewares/auth')
+const {verifyUser, verifyAdmin} = require('./middlewares/auth')
 
 dotenv.config()
 const indexRouter = require('./routes/index');
@@ -64,7 +64,7 @@ app.use('/login', loginRouter);
 app.use('/usuarios', verifyUser, usuarios);
 
 /* admin */
-app.use('/admin', verifyUser, adminindex);
+app.use('/admin', verifyAdmin, adminindex);
 app.use('/admin/productos', adminproductos);
 app.use('/admin/usuarios',   adminusuarios);
 app.use('/admin/categorias', admincategorias);
