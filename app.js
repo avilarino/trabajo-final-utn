@@ -65,10 +65,10 @@ app.use('/usuarios', verifyUser, usuarios);
 
 /* admin */
 app.use('/admin', verifyAdmin, adminindex);
-app.use('/admin/productos', adminproductos);
-app.use('/admin/usuarios',   adminusuarios);
-app.use('/admin/categorias', admincategorias);
-app.use('/admin/empleados',  adminEmpleados);
+app.use('/admin/productos', verifyAdmin, adminproductos);
+app.use('/admin/usuarios', verifyAdmin,  adminusuarios);
+app.use('/admin/categorias', verifyAdmin, admincategorias);
+app.use('/admin/empleados', verifyAdmin,  adminEmpleados);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
