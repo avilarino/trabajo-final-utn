@@ -4,7 +4,6 @@ const {all, single, create, update} = require ('./../../models/usuarios')
 const model = require('./../../models/usuarios');
 
 
-
 const allusu =  async (req, res) => {
   const usuarios = await all();
   res.render("adminUsuarios", {usuarios})
@@ -36,6 +35,7 @@ const updateusu = async (req, res) => {
   console.log(insertId);
   res.redirect('/admin/usuarios');
 }
+
 const showUpdateUsu = async (req, res) => {
   const {id} = req.params;
   const [usuario] = await single(id);
