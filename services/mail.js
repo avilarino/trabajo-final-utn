@@ -1,6 +1,6 @@
 const nodemailer = require('nodemailer');
 
-const send = async({mail, asunto = 'Bienvenido a Cars! :D!', cuerpo}) => {
+const send = async({mail, asunto = 'Bienvenido a San Cristobal!!', cuerpo}) => {
     try{
     const transporter = nodemailer.createTransport({
         service : process.env.MAIL_SERVICE || 'gmail',
