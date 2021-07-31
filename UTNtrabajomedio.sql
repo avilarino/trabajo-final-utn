@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 20-07-2021 a las 18:16:55
+-- Tiempo de generación: 01-08-2021 a las 00:23:08
 -- Versión del servidor: 10.4.19-MariaDB
 -- Versión de PHP: 7.3.28
 
@@ -158,12 +158,8 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`id`, `username`, `pass`, `mail`, `confirmacionCorreo`, `telefono`, `admin`, `habilitado`, `eliminado`, `ts_create`, `ts_update`) VALUES
-(1, 'avilari', '039a635c77faad3885da80c65edd5a91e9cb8414', 'lic.avilarino@gmail.com', '670feaf6-f375-4191-9a30-53ae212c3682', 2147483647, 1, 1, 0, '2021-06-23 19:32:11', '2021-07-16 12:43:29'),
-(2, 'Mariano', '9d79ba6b1c346e96231651c74eb4850ca3a1b79f', 'lic.avilarino@gmail.com', 'c5390c56-aa1a-46bd-9ee3-8d5838f6fee6', 2147483647, 0, 1, 0, '2021-06-24 09:54:32', '2021-07-16 12:43:32'),
-(3, 'joaco', '18c6dd85055fc807b566f18668ec09ac92a7734a', 'lic.avilarino@gmail.com', 'dc4308dd-2034-4055-ae5b-216e7d04fd48', 1234, 0, 1, 1, '2021-06-24 10:49:26', '2021-07-19 10:45:26'),
-(4, 'messi', '2c0f10cff610e78e5fea9d2899f59f201a44a76e', 'lic.avilarino@gmail.com', '534a3609-0f3e-4576-9980-b3cbe139b6f7', 1234567, 0, 1, 1, '2021-06-26 09:42:40', '2021-07-16 13:47:40'),
-(5, 'ruben', '4c7b60b92e9f91a4bd558699aa691e69a465872b', 'lic.avilarino@gmail.com', '03871551-ec9c-4ffc-bd55-20431780ab71', 123456788, 0, 1, 0, '2021-07-06 13:48:51', '2021-07-16 12:43:24'),
-(6, 'maxi', '59f6fa8328ea0c9abe608b6bd838bafcd4940d87', 'lic.avilarino@gmail.com', '6654b42e-77b5-4b64-8e1b-7043b8238fd1', 1234567, 1, 1, 0, '2021-07-06 13:50:21', '2021-07-19 10:44:41');
+(6, 'maxi', '59f6fa8328ea0c9abe608b6bd838bafcd4940d87', 'lic.avilarino@gmail.com', '6654b42e-77b5-4b64-8e1b-7043b8238fd1', 1234567, 1, 1, 0, '2021-07-06 13:50:21', '2021-07-19 10:44:41'),
+(20, 'juan', 'd96dbce9b3a3a2a2165a9bd59cdd59bc2078cf77', 'psi.agustinvilarino@gmail.com', '77f6ad5e-3be5-4087-9d30-1dd5ac45e924', 1234567, 0, 1, 0, '2021-07-31 19:13:00', '2021-07-31 19:13:21');
 
 --
 -- Índices para tablas volcadas
@@ -234,7 +230,7 @@ ALTER TABLE `productos`
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- Restricciones para tablas volcadas

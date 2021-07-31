@@ -1,9 +1,14 @@
 const express = require('express');
 const router = express.Router();
 const model = require('./../models/usuarios');
+
+// requerimos los modulos instalados //
 const sha1 = require('sha1');
 const {v4: uuid} = require('uuid');
+// requerimos el send de los servicios mail //
 const { send } = require('./../services/mail')
+
+//validamos el registro para que no queden datos vacios //
 const {validateRegistro} = require('./../middlewares/usuarios');
 
 const showRegistro = (req, res) => {
@@ -17,12 +22,12 @@ const create = async (req, res) => {
     console.log(uid)
     const usuarioFinal = { 
         username: usuario.username,
-        pass: sha1(usuario.pass),
+        pass: sha1(usuario.pass), // encriptamos la password para que no la vea el usuario//
         mail: usuario.mail,
         confirmacionCorreo: uid,
         telefono: usuario.telefono
     }
-    const usuariosExistentes = await model.all();
+    const usuariosExistentes = await model.all(); 
     usuariosExistentes.forEach(usuario => {
         if (usuario.username == usuarioFinal.username || usuario.mail == usuarioFinal.mail) duplicado = true;
     })

@@ -4,7 +4,8 @@ const schemas = {
     login: Joi.object().keys({
         username: Joi.string().required().messages({
             "string.empty": "El nombre de usuario es obligatorio"
-        }),
+        }), 
+        // delimitamos caracteristica de la contraseña //
         pass: Joi.string().min(3).max(20).required().messages({
             "string.empty" : "La pass es obligatoria",
             "string.min" : "La pass tiene que tener como minimo 3 caracteres",
