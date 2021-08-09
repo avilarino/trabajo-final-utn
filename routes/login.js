@@ -17,7 +17,7 @@ const login = async (req, res) => {
         const [{id, admin}] = logged;
         req.session.user = id;
         req.session.admin = admin;
-        res.redirect('/admin');
+        res.redirect('/');
 
     }
 }
