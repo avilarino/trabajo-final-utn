@@ -1,4 +1,4 @@
-# :zap: :zap: :zap: :zap: :zap: :zap:   Trabajo Final Diplomatura Full Stack UTN 
+# :zap: :zap: :zap:  Trabajo Final Diplomatura Full Stack UTN 
 ## *coded by - **Agustin Vilariño** -  :saxophone:*
 
 ### Welcome !!
